@@ -20,14 +20,14 @@ with it.
 
 ## Status
 
-**v1.0.0 — Release Candidate, unsigned.** Feature-complete: 29 tools
+**v1.1.0 — Release Candidate, unsigned.** Feature-complete: 30 tools
 across 6 categories. Code signing is planned but not yet in place — see
 [Installation](#installation) below for what that means when you run the
 installer.
 
 ## Features
 
-29 tools across 6 categories, built around a core device-configuration
+30 tools across 6 categories, built around a core device-configuration
 workflow (inventory → connect → analyze → compare) plus standalone
 diagnostic, protocol-reference, and security tooling.
 
@@ -79,6 +79,9 @@ diagnostic, protocol-reference, and security tooling.
 
 ### Security
 - **CVE Explorer Pro** — searches and filters a curated NVD-derived dataset of 116 networking/security CVEs by vendor, product, CVSS, and exploit status.
+- **Network & Device Vulnerability Assessment** — scans a device or subnet and cross-references it against CVEs, a live TLS handshake, and an optional pasted config, tagging each finding with its own confidence tier (never averaged with severity) and cited remediation guidance. New in v1.1.0.
+
+![Network & Device Vulnerability Assessment](screenshots/vuln-assessment.png)
 
 ## System Requirements
 
@@ -91,7 +94,7 @@ diagnostic, protocol-reference, and security tooling.
 ## Installation
 
 1. Download the VajraX PC for Windows installer,
-   `VajraX_Windows_1.0.0.msi`, from the
+   `VajraX_Windows_1.1.0.msi`, from the
    [latest release](../../releases/latest).
 2. (Recommended) Verify the download's checksum — see
    [Verifying your download](#verifying-your-download) below.
@@ -114,11 +117,11 @@ downloaded matches what was built and published.
 
 ## Verifying your download
 
-The published SHA-256 checksum for `VajraX_Windows_1.0.0.msi` is in
-`VajraX_Windows_1.0.0.msi.sha256`, attached to the same release. To check
+The published SHA-256 checksum for `VajraX_Windows_1.1.0.msi` is in
+`VajraX_Windows_1.1.0.msi.sha256`, attached to the same release. To check
 your download in PowerShell:
 
-    Get-FileHash VajraX_Windows_1.0.0.msi -Algorithm SHA256
+    Get-FileHash VajraX_Windows_1.1.0.msi -Algorithm SHA256
 
 Compare the output against the value in the `.sha256` file. They should
 match exactly.
